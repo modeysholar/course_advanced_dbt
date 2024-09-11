@@ -17,11 +17,18 @@ models:
         description: The calendar month.
 
       - name: user_id
-        description: '{{ doc("bingeflix_column_user_id") }}'
+        description: The unique identifier of the user
+        data_tests:
+          - not_null
+          - unique
 
       - name: subscription_id
         description: The unique identifier for the subscription.
+        data_tests:
+        - not_null
+        - unique
 
+        
       - name: starts_at
         description: When the subscription started.
 
@@ -30,7 +37,9 @@ models:
 
       - name: plan_name
         description: The name of the subscription plan.
-
+        data_tests:
+          - not_null
+        
       - name: mrr_amount
         description: The amount of monthly recurring revenue generated from the subscription in a given month.
 

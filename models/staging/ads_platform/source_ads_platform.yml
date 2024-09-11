@@ -1,7 +1,9 @@
 sources:
   - name: ads_platform
+    description: Information about Bingeflix marketing ads
     schema: bingeflix
     database: raw
     tables:
       - name: daily_ads
         identifier: ads
+        description: This table has information about marketing ads

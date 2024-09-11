@@ -1,3 +1,10 @@
 fct_name,column_name,id_to_exclude,comment
 fct_root_models,child,int_dates,calendar table does not need to have a source model
 
+fct_undocumented_models, RESOURCE_NAME, fct_events, I want to make exception for this model
+fct_undocumented_models, RESOURCE_NAME, stg_bingeflix__subscription_plans, I want to make exception for this model
+fct_sources_without_freshness, RESOURCE_NAME, ads_platform.daily_ads, Since data is not regularly changing in this case
+fct_sources_without_freshness, RESOURCE_NAME, bingeflix.events, Since data is not regularly changing in this case
+fct_sources_without_freshness, RESOURCE_NAME, bingeflix.subscription_plans, Since data is not regularly changing in this case
+fct_sources_without_freshness, RESOURCE_NAME, bingeflix.subscriptions, Since data is not regularly changing in this case
+fct_sources_without_freshness, RESOURCE_NAME, bingeflix.users, Since data is not regularly changing in this case
