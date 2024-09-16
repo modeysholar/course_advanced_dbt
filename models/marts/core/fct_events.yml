@@ -11,7 +11,7 @@ models:
         description: '{{ doc("bingeflix_events_session_id") }}'
         data_tests:
           - not_null
-          
+
 
       - name: created_at
         description: '{{ doc("bingeflix_events_created_at") }}'
@@ -22,7 +22,7 @@ models:
         description: '{{ doc("bingeflix_events_user_id") }}'
         data_tests:
           - not_null
-         
+
 
       - name: event_name
         description: '{{ doc("bingeflix_events_event_name") }}'

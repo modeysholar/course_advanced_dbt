@@ -3,7 +3,7 @@ models:
     config:
       tags: p0
     description: This model contains calculations for the monthly recurring revenue generated per user and subscription for each month.
-      
+
     columns:
       - name: surrogate_key
         description: The surrogate key. This acts as a primary key for this model.
@@ -28,7 +28,7 @@ models:
         - not_null
         - unique
 
-        
+
       - name: starts_at
         description: When the subscription started.
 
@@ -39,7 +39,7 @@ models:
         description: The name of the subscription plan.
         data_tests:
           - not_null
-        
+
       - name: mrr_amount
         description: The amount of monthly recurring revenue generated from the subscription in a given month.
 
