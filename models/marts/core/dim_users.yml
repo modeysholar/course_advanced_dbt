@@ -1,6 +1,10 @@
 models:
   - name: dim_users
     description: '{{ doc("bingeflix_users_table") }}'
+
+    config:
+      tags: ["weekly"]
+
     meta:
       priority: high
       owner:
@@ -71,3 +75,9 @@ models:
         description: '{{ doc("bingeflix_users_country") }}'
         data_tests:
           - not_null
+
+      - name: first_subscription_starts_at
+        description: How many subscription the user has
+
+      - name: count_of_subscriptions
+        description: Timestamp of the first subscription

@@ -1,6 +1,10 @@
 models:
   - name: dim_subscriptions
     description: '{{ doc("bingeflix_subscriptions_table") }}'
+
+    config:
+      tags: ["daily"]
+
     columns:
       - name: subscription_id
         description: '{{ doc("bingeflix_subscriptions_subscription_id") }}'
