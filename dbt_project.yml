@@ -52,3 +52,14 @@ vars:
     documentation_coverage_target: 75
     test_coverage_target: 75
     models_fanout_threshold: 10
+
+dispatch:
+  - macro_namespace: dbt
+    search_order:
+      - course_advanced_dbt
+      - dbt_snowflake_monitoring
+      - dbt
+
+query-comment:
+  comment: '{{ dbt_snowflake_monitoring.get_query_comment(node) }}'
+  append: true # Snowflake removes prefixed comments.
