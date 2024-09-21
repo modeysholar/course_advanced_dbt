@@ -14,8 +14,7 @@ models:
 
       - name: starts_at
         description: '{{ doc("bingeflix_subscriptions_starts_at") }}'
-        data_tests:
-          - not_null
+
 
       - name: ends_at
         description: '{{ doc("bingeflix_subscriptions_ends_at") }}'

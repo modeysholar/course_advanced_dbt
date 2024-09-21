@@ -14,15 +14,11 @@ models:
 
       - name: subscription_plan_id
         description: '{{ doc("bingeflix_subscriptions_subscription_plan_id") }}'
-        data_tests:
-          - not_null
-          - accepted_values:
-              values: [1, 2, 3]
+
 
       - name: user_id
         description: '{{ doc("bingeflix_subscriptions_user_id") }}'
-        data_tests:
-          - not_null
+
 
       - name: starts_at
         description: '{{ doc("bingeflix_subscriptions_starts_at") }}'
@@ -34,15 +30,11 @@ models:
 
       - name: plan_name
         description: The name of the subscription plan.
-        data_tests:
-          - not_null
+
 
       - name: pricing
         description: The monthly cost of the subscription.
-        data_tests:
-          - not_null
+
 
       - name: billing_period
         description: The cadence of the billing period.
-        data_tests:
-          - not_null

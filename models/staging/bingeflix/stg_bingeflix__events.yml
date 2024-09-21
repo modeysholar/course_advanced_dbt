@@ -20,7 +20,8 @@ models:
       - name: event_name
         description: '{{ doc("bingeflix_events_event_name") }}'
         data_tests:
-          - not_null
+          - assert_valid_event_name
+
 
       - name: event_id
         description: '{{ doc("bingeflix_events_event_id") }}'

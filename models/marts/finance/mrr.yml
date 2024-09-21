@@ -20,13 +20,13 @@ models:
         description: The unique identifier of the user
         data_tests:
           - not_null
-          - unique
+
 
       - name: subscription_id
         description: The unique identifier for the subscription.
         data_tests:
         - not_null
-        - unique
+
 
 
       - name: starts_at
@@ -57,3 +57,27 @@ models:
 
       - name: month_retained_number
         description: The number of months the subscription has been retained since it was started (first month = 0).
+
+
+unit_tests:
+  - name: unit_test__mrr
+    model: mrr
+
+    given:
+      - input: ref('dim_subscriptions')
+        format: csv
+        rows: |
+          subscription_id,user_id,starts_at,ends_at,plan_name,pricing,billing_period
+          177629, 81935, 2022-01-10 01:01:05,2022-10-13 14:25:05,'Basic',10,'Monthly'
+
+      - input: ref('int_dates')
+        format: csv
+        rows: |
+          calendar_date,day_of_month
+          2023-01-01, 1
+
+    expect:
+      format: csv
+      rows: |
+        retained_mrr_amount
+

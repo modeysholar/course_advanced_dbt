@@ -1,0 +1,19 @@
+macros:
+  - name: rolling_agg_n_periods
+    description: A macro to aggregate a column with a windows function
+    arguments:
+      - name: column_name
+        type: string
+        description: The name of the column you want to aggregate
+      - name: partition_by
+        type: string
+        description: The column you want aggregate on
+      - name: order_by
+        type: string
+        description: The column used to sort the result . Defaults to "created_at".
+      - name: agg_func
+        type: string
+        description: The type of aggregation to be performed. Defaults to "avg".
+      - name: periods
+        type: integer
+        description: Number of preceeding rows. Defaults to 7.
