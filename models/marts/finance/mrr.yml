@@ -80,4 +80,3 @@ unit_tests:
       format: csv
       rows: |
         retained_mrr_amount
-
